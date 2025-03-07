@@ -1,9 +1,9 @@
 # SSMsOnPlane
 
-This repository shares python scripts for calculating various surrogate safety measures (SSMs) for pairs of road users in two-dimensional space. 
+This repository shares python scripts for calculating various [surrogate safety measures (SSMs), or in another way called, surrogate measures of safety (SMoS)](https://www.tos.lth.se/english/research/traffic-safety-behaviour/special-expertise/smos/) for pairs of road users on an abstracted plane of road, i.e., in a two-dimensional space. 
 
 Two branches of SSMs are considered: 
-- __Longitudinal SSMs__ that are originally designed for one-dimensional (rear-end) conflicts and collisions, but can be extended to two-dimensional space by assuming constant velocities. These include Time-To-Collision (TTC), Deceleration Rate to Avoid Collision (DRAC), Modified Time-To-Collision (MTTC), and Proportion of Stopping Distance (PSD) in this repository. A previous repo [Two-Dimensional-Time-To-Collision](https://github.com/Yiru-Jiao/Two-Dimensional-Time-To-Collision) is referred to for more details on the vectorised extention.
+- __Longitudinal SSMs__ that are originally designed for one-dimensional (rear-end) conflicts and collisions, but can be extended to two-dimensional space by assuming constant velocities. These include Time-To-Collision (TTC) [^1], Deceleration Rate to Avoid Collision (DRAC), Modified Time-To-Collision (MTTC), and Proportion of Stopping Distance (PSD) in this repository. A previous repo [Two-Dimensional-Time-To-Collision](https://github.com/Yiru-Jiao/Two-Dimensional-Time-To-Collision) is referred to for more details on the vectorised extention.
 - __Two-Dimensional SSMs__ that are specifically designed for conflicts and collisions involving both longitudinal and lateral movements. These include Time Advantage (TAdv), Two-Dimensional Time-To-Collision (TTC2D), and Available Collision Time (ACT) in this repository. In addition to the above, a recently proposed indicator, [Emergency Index (EI)](https://doi.org/10.1016/j.trc.2024.104981), is open-sourced by its authors in the linked [repo](https://github.com/AutoChengh/EmergencyIndex).
 
 These metrics/indicators are designed to be used with trajectory data from road users, such as vehicles or cyclists, to assess their interaction safety in a given scenario. The repository also includes helper functions to evaluate the computational efficiency. For references to these indicators, please scroll down to the bottom of this page.
@@ -76,7 +76,7 @@ The notebook provides a full demonstration of the efficiency evaluation function
 - The computation can return extreme small positive values (for TTC/MTTC) or extreme large values (for DRAC) even when the vehivles overlap a bit (so should be negative values). In order to improve the accuracy, please use the function `geometry_utils.CurrentD(samples)` to exclude overlapping vehicles.
 
 ## References
-1. \[[TTC](https://www.ictct.net/wp-content/uploads/SMoS_Library/LIB_Tarko_2018.pdf)\] Hayward, J., 1972. Near miss determination through use of a scale of danger. 51st Annual Meeting of the Highway Research Board, 384, 24–34.
+[^1]: \[[TTC](https://www.ictct.net/wp-content/uploads/SMoS_Library/LIB_Tarko_2018.pdf)\] Hayward, J., 1972. Near miss determination through use of a scale of danger. 51st Annual Meeting of the Highway Research Board, 384, 24–34.
 2. \[[DRAC](https://trid.trb.org/View/66554)\] Cooper, D., Ferguson, N., 1976. Traffic studies at T-junctions – A conflict simulation record. Traffic Engineering and Control, 17 (7), 306–309.
 3. \[[MTTC](https://journals.sagepub.com/doi/10.3141/2083-12)\] Ozbay, K., Yang, H., Bartin, B., Mudigonda, S. (2008). Derivation and Validation of New Simulation-Based Surrogate Safety Measure. Transportation Research Record, 2083(1), 105-113.
 4. \[[PSD](https://trid.trb.org/View/85806)\] Allen, B., Shin, B., Cooper, P., 1978. Analysis of traffic conflicts and collisions. Transportation Research Record, 667, 67–74.

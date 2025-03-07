@@ -1,12 +1,14 @@
 # SSMsOnPlane
 
-This repository shares python scripts for calculating various [surrogate safety measures (SSMs), or in another way called, surrogate measures of safety (SMoS)](https://www.ictct.net/wp-content/uploads/SMoS_Library/LIB_Tarko_2018.pdf) for pairs of road users on an abstracted plane of road, i.e., in a two-dimensional space. 
+This repository shares vectorised python scripts to calculate various [surrogate safety measures (SSMs), or in another way called, surrogate measures of safety (SMoS)](https://www.ictct.net/wp-content/uploads/SMoS_Library/LIB_Tarko_2018.pdf) for pairs of road users on an abstracted plane of road, i.e., in a two-dimensional space. 
 
 Two branches of SSMs are considered: 
 - __Longitudinal SSMs__ that are originally designed for one-dimensional (rear-end) conflicts and collisions, but can be extended to two-dimensional space by assuming constant velocities. These include Time-To-Collision (TTC) [^1], Deceleration Rate to Avoid Collision (DRAC) [^2], Modified Time-To-Collision (MTTC) [^3], and Proportion of Stopping Distance (PSD) [^4] in this repository. A previous repo [Two-Dimensional-Time-To-Collision](https://github.com/Yiru-Jiao/Two-Dimensional-Time-To-Collision) is referred to for more details on the vectorised extention.
 - __Two-Dimensional SSMs__ that are specifically designed for conflicts and collisions involving both longitudinal and lateral movements. These include Time Advantage (TAdv) [^5], Two-Dimensional Time-To-Collision (TTC2D) [^6], and Anticipated Collision Time (ACT) [^7] in this repository. In addition to the above, a recently proposed indicator, [Emergency Index (EI)](https://doi.org/10.1016/j.trc.2024.104981), is open-sourced by its authors in the linked [repo](https://github.com/AutoChengh/EmergencyIndex).
 
-These metrics/indicators are designed to be used with trajectory data from road users, such as vehicles or cyclists, to assess their interaction safety in a given scenario. The repository also includes helper functions to evaluate the computational efficiency. For references to these indicators, please scroll down to the bottom of this page.
+These metrics/indicators are designed to be used with trajectory data from road users, such as vehicles or cyclists, to assess their interaction safety in a given scenario. For references to these indicators, please scroll down to the bottom of this page. 
+
+Thanks to vectorisation, the implementations in this repository are very efficient in time for large-scale calculation. Helper functions to evaluate the efficiency are therefore also provided.
 
 ## Overview
 The repository is structured as follows:

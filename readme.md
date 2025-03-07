@@ -4,7 +4,7 @@ This repository shares vectorised python scripts to calculate various [surrogate
 
 Two branches of SSMs are considered: 
 - __Longitudinal SSMs__ that are originally designed for one-dimensional (rear-end) conflicts and collisions, but can be extended to two-dimensional space by assuming constant velocities. These include Time-To-Collision (TTC) [^1], Deceleration Rate to Avoid Collision (DRAC) [^2], Modified Time-To-Collision (MTTC) [^3], and Proportion of Stopping Distance (PSD) [^4] in this repository. A previous repo [Two-Dimensional-Time-To-Collision](https://github.com/Yiru-Jiao/Two-Dimensional-Time-To-Collision) is referred to for more details on the vectorised extention.
-- __Two-Dimensional SSMs__ that are specifically designed for conflicts and collisions involving both longitudinal and lateral movements. These include Time Advantage (TAdv) [^5], Two-Dimensional Time-To-Collision (TTC2D) [^6], and Anticipated Collision Time (ACT) [^7] in this repository. In addition to the above, a recently proposed indicator, Emergency Index (EI) [^8], is open-sourced by its authors in the linked [repo](https://github.com/AutoChengh/EmergencyIndex).
+- __Two-Dimensional SSMs__ that are specifically designed for conflicts and collisions involving both longitudinal and lateral movements. These include Time Advantage (TAdv) [^5], Anticipated Collision Time (ACT) [^6], and Two-Dimensional Time-To-Collision (TTC2D) [^7] in this repository. In addition to the above, a recently proposed indicator, Emergency Index (EI) [^8], is open-sourced by its authors in the linked [repo](https://github.com/AutoChengh/EmergencyIndex).
 
 These metrics/indicators are designed to be used with trajectory data from road users, such as vehicles or cyclists, to assess their interaction safety in a given scenario. For references to these indicators, please scroll down to the bottom of this page. 
 
@@ -81,18 +81,18 @@ print(results[['TTC']].head())
 This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 ## References
-[^1]: \[[TTC](https://trid.trb.org/View/115323)\] Hayward, J., 1972. Near miss determination through use of a scale of danger. 51st Annual Meeting of the Highway Research Board, 384, 24–34.
+[^1]: \[[TTC, 1972](https://trid.trb.org/View/115323)\] Hayward, J., Near miss determination through use of a scale of danger. 51st Annual Meeting of the Highway Research Board, 384, 24–34.
 
-[^2]: \[[DRAC](https://trid.trb.org/View/66554)\] Cooper, D., Ferguson, N., 1976. Traffic studies at T-junctions – A conflict simulation record. Traffic Engineering and Control, 17 (7), 306–309.
+[^2]: \[[DRAC, 1976](https://trid.trb.org/View/66554)\] Cooper, D., Ferguson, N., Traffic studies at T-junctions – A conflict simulation record. Traffic Engineering and Control, 17 (7), 306–309.
 
-[^3]: \[[MTTC](https://journals.sagepub.com/doi/10.3141/2083-12)\] Ozbay, K., Yang, H., Bartin, B., Mudigonda, S. (2008). Derivation and Validation of New Simulation-Based Surrogate Safety Measure. Transportation Research Record, 2083(1), 105-113.
+[^3]: \[[MTTC, 2008](https://journals.sagepub.com/doi/10.3141/2083-12)\] Ozbay, K., Yang, H., Bartin, B., Mudigonda, S., Derivation and Validation of New Simulation-Based Surrogate Safety Measure. Transportation Research Record, 2083(1), 105-113.
 
-[^4]: \[[PSD](https://trid.trb.org/View/85806)\] Allen, B., Shin, B., Cooper, P., 1978. Analysis of traffic conflicts and collisions. Transportation Research Record, 667, 67–74.
+[^4]: \[[PSD, 1978](https://trid.trb.org/View/85806)\] Allen, B., Shin, B., Cooper, P., Analysis of traffic conflicts and collisions. Transportation Research Record, 667, 67–74.
 
-[^5]: \[[TAdv](https://doi.org/10.1016/j.aap.2010.03.021)\] Laureshyn, A., Svensson, Å., Hydén, C. (2010). Evaluation of traffic safety, based on micro-level behavioural data: Theoretical framework and first implementation. Accident Analysis & Prevention, 42(6), 1637-1646.
+[^5]: \[[TAdv, 2010](https://doi.org/10.1016/j.aap.2010.03.021)\] Laureshyn, A., Svensson, Å., Hydén, C., Evaluation of traffic safety, based on micro-level behavioural data: Theoretical framework and first implementation. Accident Analysis & Prevention, 42(6), 1637-1646.
 
-[^6]: \[[TTC2D](https://doi.org/10.1016/j.aap.2023.107063)\] Guo, H., Xie, K., Keyvan-Ekbatani, M. (2023). Modeling driver’s evasive behavior during safety–critical lane changes: Two-dimensional time-to-collision and deep reinforcement learning. Accident Analysis & Prevention, 186, 107063.
+[^6]: \[[ACT, 2022](https://doi.org/10.1016/j.trc.2022.103655)\] Venthuruthiyil, S. P., Chunchu, M., Anticipated Collision Time (ACT): A two-dimensional surrogate safety indicator for trajectory-based proactive safety assessment. Transportation research part C: emerging technologies, 139, 103655.
 
-[^7]: \[[ACT](https://doi.org/10.1016/j.trc.2022.103655)\] Venthuruthiyil, S. P., Chunchu, M. (2022). Anticipated Collision Time (ACT): A two-dimensional surrogate safety indicator for trajectory-based proactive safety assessment. Transportation research part C: emerging technologies, 139, 103655.
+[^7]: \[[TTC2D, 2023](https://doi.org/10.1016/j.aap.2023.107063)\] Guo, H., Xie, K., Keyvan-Ekbatani, M., Modeling driver’s evasive behavior during safety–critical lane changes: Two-dimensional time-to-collision and deep reinforcement learning. Accident Analysis & Prevention, 186, 107063.
 
-[^8]: \[[EI](https://doi.org/10.1016/j.trc.2024.104981)\] Cheng, H., Jiang, Y., Zhang, H., Chen, K., Huang, H., Xu, S., Zheng, S. (2025). Emergency Index (EI): A two-dimensional surrogate safety measure considering vehicles’ interaction depth. Transportation Research Part C: Emerging Technologies, 171, 104981.
+[^8]: \[[EI, 2025](https://doi.org/10.1016/j.trc.2024.104981)\] Cheng, H., Jiang, Y., Zhang, H., Chen, K., Huang, H., Xu, S., Zheng, S., Emergency Index (EI): A two-dimensional surrogate safety measure considering vehicles’ interaction depth. Transportation Research Part C: Emerging Technologies, 171, 104981.

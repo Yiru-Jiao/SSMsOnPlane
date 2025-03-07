@@ -1,0 +1,6 @@
+**/*.*
+**/__pycache__
+!readme.md
+!**/*.py
+!example.ipynb
+!.gitignore

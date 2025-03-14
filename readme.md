@@ -28,6 +28,18 @@ The notebook `example.ipynb` provides a full demonstration of the efficiency eva
   <img src="assets/efficiency_comparison.svg" alt="Efficiency comparison" width="100%" height="100%"/>
 </p>
 
+## Citation
+If you use this software in your work, please kindly cite it using the following metadata:
+```latex
+@software{jiao2025ssmsonplane,
+author = {Jiao, Yiru},
+month = mar,
+title = {{Vectorised surrogate safety measures for traffic interactions in two-dimensional space}},
+url = {https://github.com/Yiru-Jiao/SSMsOnPlane},
+year = {2025}
+}
+```
+
 ## Package requirements
 Any versions of the following packages should work: `NumPy`, `Pandas`, `Matplotlib` (for plotting in the notebook), and `tqdm` (for progress visualization in the notebook).
 
